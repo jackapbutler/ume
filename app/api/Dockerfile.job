@@ -1,0 +1,16 @@
+# Use the official Python image as base
+FROM python:3.10-slim
+
+# Set working directory in the container
+WORKDIR /app
+
+# Install dependencies from requirements.txt
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+# Copy the application files
+COPY src/ ./src/
+COPY .env .
+
+COPY job.py .
+CMD ["python", "job.py"]

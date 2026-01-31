@@ -1,0 +1,8 @@
+*.env
+*.json
+__pycache__/
+
+# Firebase service account keys
+*-admin.json
+*-key.json
+firebase-*.json
